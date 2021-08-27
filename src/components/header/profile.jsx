@@ -1,7 +1,8 @@
 import { Button } from 'react-bootstrap'
 import React, { useState } from 'react'
 import PersonImage from '../../assets/images/person.jpg'
-import iranFlag from '../../assets/images/iran-flag.svg'
+import NotificationIcon from '../../assets/images/notification-icon.svg'
+import NotificationIconLight from '../../assets/images/notification-icon-light.svg'
 
 
 const Profile = () => {
@@ -16,8 +17,11 @@ const Profile = () => {
         token ? (
             <div className="d-flex align-items-center">
                 <img className="rounded-circle" width="50px" height="50px" src={PersonImage} alt="person" />
-                <img className="rounded-circle" width="50px" height="50px" src={iranFlag} alt="person" />
-                <div className="flag"></div>
+                <div className="d-block mx-3 notification" width="30px" height="30px">
+                    <img className="notification__icon" width="30px" height="30px" src={NotificationIcon} alt="person" />
+                    <img className="notification__light" width="7px" height="7px" src={NotificationIconLight} alt="person" />
+                </div>
+                <div className="flag flag__iran"></div>
             </div>
         ) : (
             <Button variant="primary" onClick={loginHandler}>ورود یا عضویت</Button>  

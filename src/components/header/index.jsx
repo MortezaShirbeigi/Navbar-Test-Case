@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="d-flex align-items-center header">
       <Container fluid>
-        <Row>
+        <Row className="align-items-center">
           <Col xs={3}>
             <Profile />
           </Col>
