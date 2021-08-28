@@ -2,7 +2,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Logo from "../../assets/images/logo.svg";
 import NavigationMenu from "./navigationMenu";
-import Profile from "./profile";
+import Profile from "./profile/profile";
+import Search from "./search";
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
             <Profile />
           </Col>
           <Col xs={7}>
-            <h1 className="text-center">search</h1>
+            <Search />
           </Col>
           <Col xs={2}>
             <div className="d-flex justify-content-end">

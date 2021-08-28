@@ -1,7 +1,9 @@
+// for general header
 .header {
   background-color: $white-color;
   height: 80px;
 
+  // for navigation(hamburger menu)
   .navigation {
       &__button {
         margin-right: -12px;
@@ -52,21 +54,97 @@
     }
   }
 
-  .flag {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      &__iran {
-          background-image: url("../../assets/images/iran-flag.svg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
+  // for search input and all elements
+  .search {
+    overflow: hidden;
+    z-index: 22;
+    &__input {
+      background-color: $light-gray-color;
+      direction: rtl;
+      border-radius: 12px;
+      border: none;
+      padding: 10px 50px 10px 137px;
+      border: 2px solid $white-color;
+      color: $secondary-color;
+
+      &:hover {
+        background-color: $darker-gray-color;
       }
+
+      &:focus {
+        box-shadow: none;
+        border: 2px solid $secondary-color;
+      }
+      &--disable {
+        border: 2px solid $white-color;
+      }  
+      &--enable {
+        border: 2px solid $secondary-color;
+      }
+    }
+
+    &__button {
+      top: 6px;
+      left: 6px;
+      font-size: 14px;
+      border-radius: 10px;
+      &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+      &--enable {
+        transform: translateX(0px);
+        transition: all .7s;
+      }
+      &--disable {
+        transform: translateX(-150px);
+        transition: all .7s;
+      }
+    }
+
+    &__icon {
+      color: $gray-color;
+      top: 10px;
+      right: 10px;
+      padding-left: 10px;
+      border-left: 2px solid $gray-color;
+    }
+    &__dropdown {
+      background-color: $white-color;
+      box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 14px 14px;
+      margin-top: -5px;
+      z-index: 11;
+      direction: rtl;
+      &--show-dropdown {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+        transition: all .7s;
+        transform: translateY(0px);
+      }  
+      &--hide-dropdown {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transition: all .7s;
+        transform: translateY(-10px);
+      }  
+    }
+    &__row {
+      &:hover {
+        background-color: $light-gray-color;
+      } 
+    }
   }
 
-  .notification {
+  // for notification on header
+  .notifications {
       position: relative;
-      &:hover .notification__icon {
+      &:hover .notifications__icon {
           opacity: 1;
       }
       &__icon {
@@ -79,7 +157,97 @@
           height: 5px;
           position: absolute;
           top: 4px;
-          right: 6px;
+          right: 30px;
       }
+    &__dropdown {
+      background-color: $white-color;
+      box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.2);
+      border-radius: 14px;
+      width: 400px;
+      left: 20px;
+      top: 30px;
+      direction: rtl;
+      overflow: hidden;
+    }
+    &__row {
+      &:hover {
+        background-color: $light-gray-color;
+      }
+    }
+    &__button {
+      &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+  
+  // for miniprofile on header
+  .miniprofile {
+    &__dropdown {
+      background-color: $white-color;
+      box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.2);
+      border-radius: 14px;
+      width: 350px;
+      left: 20px;
+      top: 30px;
+      overflow: hidden;
+    }
+    &__row {
+      &:hover {
+        background-color: $light-gray-color;
+      }
+    }
+  }
+
+  // for language dropdown
+  .website-Language {
+    &__dropdown {
+      background-color: $white-color;
+      box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.2);
+      border-radius: 14px;
+      width: 350px;
+      height: 350px;
+      overflow-y: scroll;
+      left: 20px;
+      top: 30px;
+      direction: rtl;
+    }
+    &__row {
+      &:hover {
+        background-color: $light-gray-color;
+      }
+    }
+  }
+
+  // for flag on header
+  .flag {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      &__iran {
+          background-image: url("../../assets/images/iran-flag.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+      }
+  }
+
+  // show dropdown styles
+  .show-dropdown {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    transition: all .7s;
+    transform: translateY(0px);
+  }
+
+  // hide dropdown styles
+  .hide-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all .7s;
+    transform: translateY(-10px);
   }
 }

@@ -1,11 +1,13 @@
+// custom variables
+@import "./generals/variables.scss";
+
 // boostrap styles
 @import "~bootstrap/scss/bootstrap";
-@import "~bootstrap/dist/css/bootstrap.rtl.min.css";
 
 // my general styles
 @import "./generals/fonts.scss";
-@import "./generals/variables.scss";
 @import "./generals/reset.scss";
+@import "./generals/utilities.scss";
 
 // components styles
 @import "./components/footer.scss";
