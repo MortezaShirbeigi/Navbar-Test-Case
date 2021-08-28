@@ -5,10 +5,10 @@ const Home = () => {
     return (
         <Layout>
             <div>
-                <h1 className="text-center mt-5 pt-5">پیاده سازی منو</h1>
+                <h1 className="text-secondary text-center mt-5 pt-5">پیاده سازی منو</h1>
             </div>
         </Layout>
     )
 }
 
-export default Home
+export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import NavigationMenu from "./navigationMenu";
-import Profile from "./profile/profile";
+import Profile from "./profile";
 import Search from "./search";
 import { baseData } from "../../constants"
 
