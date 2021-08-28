@@ -1,9 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Logo from "../../assets/images/logo.svg";
 import NavigationMenu from "./navigationMenu";
 import Profile from "./profile/profile";
 import Search from "./search";
+import { baseData } from "../../constants"
 
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
           </Col>
           <Col xs={2}>
             <div className="d-flex justify-content-end">
-              <img className="img-fluid m-3" width="80px" src={Logo} alt="" />
+              <img className="img-fluid m-3" width="80px" src={baseData.logo} alt="" />
               <NavigationMenu />
             </div>
           </Col>
